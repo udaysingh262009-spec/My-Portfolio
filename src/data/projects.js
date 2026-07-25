@@ -11,6 +11,8 @@ import quickhireDashboard from '../assets/projects/quickhire_dashboard.png'
 
 import portfolioHome from '../assets/projects/portfolio_home.png'
 import portfolioAbout from '../assets/projects/portfolio_about.png'
+import portfolioSkills from '../assets/projects/portfolio_skills.png'
+import portfolioContact from '../assets/projects/portfolio_contact.png'
 
 export const projects = [
   {
@@ -25,6 +27,9 @@ export const projects = [
     gallery: [
       krishimitraHome,
       krishimitraDisease,
+      krishimitraLogin,
+      krishimitraAi,
+      krishimitraWeather,
     ],
     github: 'https://github.com/udaysingh262009-spec/KrishiMitra-AI',
     demo: 'https://krishimitra-demo.vercel.app',
@@ -47,6 +52,8 @@ export const projects = [
     gallery: [
       quickhireSplash,
       quickhireDashboard,
+      quickhireRole,
+      quickhireRegister,
     ],
     github: 'https://github.com/udaysingh262009-spec?tab=repositories',
     demo: 'https://quickhire-demo.vercel.app',
@@ -69,6 +76,8 @@ export const projects = [
     gallery: [
       portfolioHome,
       portfolioAbout,
+      portfolioSkills,
+      portfolioContact,
     ],
     github: 'https://github.com/udaysingh262009-spec/My-Portfolio',
     demo: '#',
