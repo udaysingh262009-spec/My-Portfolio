@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaGithub, FaCode, FaLaptopCode, FaBrain, FaImages, FaXmark, FaChevronLeft, FaChevronRight, FaLock } from 'react-icons/fa6'
+import { FaGithub, FaCode, FaLaptopCode, FaBrain, FaImages, FaXmark, FaChevronLeft, FaChevronRight, FaLock, FaUpRightFromSquare } from 'react-icons/fa6'
 
 export default function ProjectCard({ project }) {
-  const { title, description, image, gallery, tech = [], github, category } = project
+  const { title, description, image, gallery, tech = [], github, demo, category } = project
 
   const [activeImgIndex, setActiveImgIndex] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -28,6 +28,7 @@ export default function ProjectCard({ project }) {
   }
 
   const CategoryIcon = getCategoryIcon(category)
+  const hasLiveDemo = demo && demo !== '#'
 
   return (
     <>
@@ -98,7 +99,7 @@ export default function ProjectCard({ project }) {
           )}
         </div>
 
-        {/* Card Body (Balanced Font Sizes) */}
+        {/* Card Body */}
         <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between space-y-4 text-left">
           <div className="space-y-2">
             {/* Title */}
@@ -125,25 +126,37 @@ export default function ProjectCard({ project }) {
               ))}
             </div>
 
-            {/* Action Links (GitHub Repository & Demo Status Badge) */}
+            {/* Action Links (Live Demo Button & GitHub Repository Link) */}
             <div className="flex items-center gap-2.5 pt-2.5 border-t border-white/10">
+              {hasLiveDemo ? (
+                <a
+                  href={demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-bold text-[#060B11] bg-emerald-glow-btn rounded-xl transition-all duration-300 hover:scale-105 shadow-md"
+                >
+                  <span>Live Demo</span>
+                  <FaUpRightFromSquare size={11} />
+                </a>
+              ) : (
+                <div
+                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-mono font-semibold text-gray-400 glass-panel rounded-xl border border-white/10"
+                  title="Live Demo Hosting Upcoming"
+                >
+                  <FaLock size={10} className="text-emerald-400" />
+                  <span>Demo Soon</span>
+                </div>
+              )}
+
               <a
                 href={github || 'https://github.com/udaysingh262009-spec?tab=repositories'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 px-3.5 py-2 text-xs font-bold text-[#060B11] bg-emerald-glow-btn rounded-xl transition-all duration-300 hover:scale-105 shadow-md"
+                className="inline-flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold text-gray-200 glass-panel rounded-xl border border-white/10 hover:border-emerald-400/50 hover:text-white transition-all duration-300"
               >
-                <FaGithub size={15} />
-                <span>View GitHub Code</span>
+                <FaGithub size={14} />
+                <span>View Code</span>
               </a>
-
-              <div
-                className="inline-flex items-center justify-center gap-1.5 px-2.5 py-2 text-[11px] font-mono font-semibold text-gray-400 glass-panel rounded-xl border border-white/10"
-                title="Live Demo Hosting Upcoming"
-              >
-                <FaLock size={10} className="text-emerald-400" />
-                <span>Demo Soon</span>
-              </div>
             </div>
           </div>
         </div>

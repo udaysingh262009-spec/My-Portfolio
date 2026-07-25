@@ -32,7 +32,7 @@ export const projects = [
       krishimitraWeather,
     ],
     github: 'https://github.com/udaysingh262009-spec/KrishiMitra-AI',
-    demo: 'https://krishimitra-demo.vercel.app',
+    demo: 'https://krishi-mitra-ai-alpha.vercel.app/',
     featured: true,
     highlights: [
       'Crop Disease Image Detection with 96% Accuracy',
@@ -56,7 +56,7 @@ export const projects = [
       quickhireRegister,
     ],
     github: 'https://github.com/udaysingh262009-spec?tab=repositories',
-    demo: 'https://quickhire-demo.vercel.app',
+    demo: '#',
     featured: true,
     highlights: [
       'Real-time Map Location & Nearby Worker Discovery',
@@ -80,7 +80,7 @@ export const projects = [
       portfolioContact,
     ],
     github: 'https://github.com/udaysingh262009-spec/My-Portfolio',
-    demo: '#',
+    demo: 'https://my-portfolio-three-omega-66j949zcmp.vercel.app/',
     featured: true,
     highlights: [
       'Futuristic Glassmorphic Neon UI & Micro-animations',
