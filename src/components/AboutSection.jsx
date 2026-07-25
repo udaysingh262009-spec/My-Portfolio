@@ -48,24 +48,16 @@ export default function AboutSection() {
               {/* Glowing Neon Green Dual Ring Circle Frame (480px x 480px) */}
               <div className="relative w-[310px] h-[310px] sm:w-[420px] sm:h-[420px] lg:w-[480px] lg:h-[480px] rounded-full p-2.5 bg-gradient-to-b from-[#00FF9D] via-emerald-500/40 to-transparent shadow-[0_0_90px_rgba(0,255,157,0.45)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_110px_rgba(0,255,157,0.6)] group">
                 
-                {/* Inner Circular Portrait Window */}
+                {/* Inner Circular Portrait Window (Pure #060B11 Dark Background) */}
                 <div className="w-full h-full rounded-full overflow-hidden border-2 border-emerald-400/50 relative shadow-2xl bg-[#060B11]">
                   
-                  {/* Photo inside Large Circular Window */}
+                  {/* Perfect Seamless Dark Theme Profile Photo */}
                   <img
-                    src="/uday_profile.jpg"
-                    onError={(e) => { e.target.src = '/uday_profile_dark.jpg' }}
+                    src="/uday_profile_perfect.png"
+                    onError={(e) => { e.target.src = '/uday_profile.jpg' }}
                     alt="Uday Singh Portrait"
-                    className="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.08] transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover object-center filter brightness-[1.02] contrast-[1.06] transition-transform duration-700 group-hover:scale-105"
                   />
-
-                  {/* Dark Vignette Radial Overlay */}
-                  <div
-                    className="absolute inset-0 rounded-full pointer-events-none z-10"
-                    style={{
-                      background: 'radial-gradient(circle at 50% 45%, transparent 35%, rgba(6, 11, 17, 0.45) 65%, rgba(6, 11, 17, 0.95) 90%, #060B11 100%)',
-                    }}
-                  ></div>
 
                   {/* Bottom Smooth Dark Gradient Blend */}
                   <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#060B11] via-[#060B11]/80 to-transparent pointer-events-none z-20"></div>
@@ -85,7 +77,7 @@ export default function AboutSection() {
 
           </motion.div>
 
-          {/* COLUMN 2 (RIGHT): Bio Text (Updated Exact User Wording), Highlights & Superpower Badge */}
+          {/* COLUMN 2 (RIGHT): Bio Text, Highlights & Superpower Badge */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
