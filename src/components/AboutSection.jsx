@@ -4,7 +4,7 @@ import { FaGraduationCap, FaLocationDot, FaHeart, FaBolt, FaArrowRight, FaCode }
 
 export default function AboutSection() {
   const highlights = [
-    { icon: FaGraduationCap, text: 'Computer Engineering (Diploma)' },
+    { icon: FaGraduationCap, text: 'Computer Engineering Student' },
     { icon: FaLocationDot, text: 'From: India 🇮🇳' },
     { icon: FaHeart, text: 'Love to work on AI & Web Projects' },
     { icon: FaBolt, text: 'Always learning new technologies' },
@@ -59,7 +59,7 @@ export default function AboutSection() {
                     className="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.08] transition-transform duration-700 group-hover:scale-105"
                   />
 
-                  {/* Dark Vignette Radial Overlay (Fades photo background 100% perfectly into #060B11) */}
+                  {/* Dark Vignette Radial Overlay */}
                   <div
                     className="absolute inset-0 rounded-full pointer-events-none z-10"
                     style={{
@@ -85,7 +85,7 @@ export default function AboutSection() {
 
           </motion.div>
 
-          {/* COLUMN 2 (RIGHT): Bio, Highlights & Superpower Badge */}
+          {/* COLUMN 2 (RIGHT): Bio Text (Updated Exact User Wording), Highlights & Superpower Badge */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -98,7 +98,7 @@ export default function AboutSection() {
                 Hi, I'm <span className="text-emerald-400">Uday Singh</span>
               </h3>
               <p className="text-base sm:text-lg text-gray-300 font-light leading-relaxed">
-                I am a passionate <strong className="text-white font-semibold">Full Stack Developer</strong> and <strong className="text-emerald-400 font-semibold">AI Engineering Enthusiast</strong> currently pursuing my Diploma in Computer Engineering. I love turning complex ideas into real-world applications using modern web technologies and AI.
+                I believe technology has the power to solve real-world problems. As a passionate <strong className="text-white font-semibold">Full Stack Developer</strong> and <strong className="text-emerald-400 font-semibold">AI learner</strong>, I'm constantly exploring new tools, frameworks, and ideas to build fast, responsive, and impactful applications. My goal is to create digital experiences that are both functional and visually engaging.
               </p>
             </div>
 
