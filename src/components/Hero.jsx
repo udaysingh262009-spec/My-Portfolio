@@ -44,65 +44,65 @@ export default function Hero() {
   ]
 
   return (
-    <section id="home" className="relative w-full min-h-[calc(100vh-80px)] pt-[52px] pb-4 px-4 sm:px-8 lg:px-12 z-10 flex items-center justify-center">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full max-w-[1650px] mx-auto my-auto relative z-10">
+    <section id="home" className="relative w-full min-h-[calc(100vh-80px)] pt-[60px] pb-6 px-4 sm:px-8 lg:px-12 z-10 flex items-center justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full max-w-[1600px] mx-auto my-auto relative z-10">
         
-        {/* COLUMN 1 (LEFT): Text Content & Actions */}
+        {/* COLUMN 1 (LEFT): Text Content & Actions (Perfectly Balanced Text Sizes) */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="lg:col-span-6 flex flex-col items-start space-y-4 text-left z-20 lg:-translate-y-3 lg:translate-x-3"
+          className="lg:col-span-6 flex flex-col items-start space-y-3.5 text-left z-20"
         >
           {/* Top Greeting Badge */}
           <motion.div variants={itemVariants}>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-emerald-500/30 text-xs font-semibold text-gray-200 shadow-md">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill border border-emerald-500/30 text-xs font-semibold text-gray-200 shadow-md">
               <span className="animate-bounce">👋</span>
               <span>Hi, I'm Uday Singh</span>
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             </div>
           </motion.div>
 
-          {/* Headline & Subtitle */}
-          <motion.div variants={itemVariants} className="space-y-2">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold font-['Sora'] tracking-tight text-white leading-[1.08]">
+          {/* Headline & Subtitle (Balanced Proportional Text Scaling) */}
+          <motion.div variants={itemVariants} className="space-y-1.5">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-['Sora'] tracking-tight text-white leading-tight">
               Computer Engineering <br />
               <span className="text-gradient-emerald">Student</span>
             </h1>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-['Sora'] text-gray-300">
+            <h2 className="text-base sm:text-lg lg:text-xl font-bold font-['Sora'] text-gray-300">
               Passionate About AI & Web Development
             </h2>
           </motion.div>
 
           {/* Subtitle */}
-          <motion.p variants={itemVariants} className="text-sm sm:text-base text-gray-300 font-light leading-relaxed max-w-lg">
+          <motion.p variants={itemVariants} className="text-xs sm:text-sm text-gray-300 font-light leading-relaxed max-w-lg">
             I build modern, <span className="text-emerald-400 font-semibold">scalable</span> and <span className="text-emerald-400 font-semibold">intelligent digital products</span> that solve real world problems using code & AI.
           </motion.p>
 
           {/* Action Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3.5 pt-1 w-full sm:w-auto">
+          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 pt-1 w-full sm:w-auto">
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 text-sm sm:text-base font-bold text-[#060B11] bg-emerald-glow-btn rounded-xl transition-all duration-300 hover:scale-105 shadow-xl"
+              className="inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-bold text-[#060B11] bg-emerald-glow-btn rounded-xl transition-all duration-300 hover:scale-105 shadow-xl"
             >
               <span>View Projects</span>
-              <FaArrowRight size={15} />
+              <FaArrowRight size={14} />
             </Link>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 text-sm sm:text-base font-semibold text-gray-200 glass-panel rounded-xl border border-white/10 hover:border-emerald-400/50 hover:text-white transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-semibold text-gray-200 glass-panel rounded-xl border border-white/10 hover:border-emerald-400/50 hover:text-white transition-all duration-300"
             >
               <span>Download Resume</span>
-              <FaDownload size={15} className="text-emerald-400" />
+              <FaDownload size={14} className="text-emerald-400" />
             </Link>
           </motion.div>
 
           {/* 4 Stats Grid Cards */}
-          <motion.div variants={itemVariants} className="grid grid-cols-4 gap-3 pt-2 w-full max-w-lg">
+          <motion.div variants={itemVariants} className="grid grid-cols-4 gap-2.5 pt-1.5 w-full max-w-lg">
             {stats.map((st, i) => (
-              <div key={i} className="glass-panel p-3 rounded-2xl border border-emerald-500/15 text-center hover:border-emerald-400/30 transition-colors">
-                <div className="text-lg sm:text-xl font-extrabold text-emerald-400 font-['Sora']">{st.num}</div>
+              <div key={i} className="glass-panel p-2.5 rounded-2xl border border-emerald-500/15 text-center hover:border-emerald-400/30 transition-colors">
+                <div className="text-base sm:text-lg font-extrabold text-emerald-400 font-['Sora']">{st.num}</div>
                 <div className="text-[10px] sm:text-xs text-gray-400 leading-tight mt-0.5">{st.label}</div>
               </div>
             ))}
@@ -125,7 +125,7 @@ export default function Hero() {
             className="relative z-10 flex items-center justify-center"
           >
             {/* Glowing Neon Green Dual Ring Circle Frame */}
-            <div className="relative w-[290px] h-[290px] sm:w-[380px] sm:h-[380px] lg:w-[440px] lg:h-[440px] rounded-full p-2 bg-gradient-to-b from-[#00FF9D] via-emerald-500/40 to-transparent shadow-[0_0_80px_rgba(0,255,157,0.45)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_110px_rgba(0,255,157,0.6)] group">
+            <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:w-[420px] lg:h-[420px] rounded-full p-2 bg-gradient-to-b from-[#00FF9D] via-emerald-500/40 to-transparent shadow-[0_0_80px_rgba(0,255,157,0.45)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_110px_rgba(0,255,157,0.6)] group">
               
               {/* Inner Circular Portrait Window (Pure #060B11 Dark Background) */}
               <div className="w-full h-full rounded-full overflow-hidden border-2 border-emerald-400/50 relative shadow-2xl bg-[#060B11]">
