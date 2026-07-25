@@ -21,13 +21,10 @@ export const projects = [
     description: 'An intelligent agricultural assistance platform providing real-time plant disease diagnostics, localized weather insights, market price analysis, and voice-assisted farming guidance.',
     longDescription: 'KrishiMitra-Ai leverages Deep Learning & Machine Learning models to analyze crop leaf images, diagnose plant diseases accurately, and suggest targeted organic treatments. It features FastAPI backend endpoints, real-time weather API integration, and bilingual voice query support for farmers across rural India.',
     tech: ['HTML', 'CSS', 'Tailwind CSS', 'React', 'JavaScript', 'FastAPI', 'NumPy', 'Pandas'],
-    image: krishimitraLogin,
+    image: krishimitraHome,
     gallery: [
-      krishimitraLogin,
       krishimitraHome,
-      krishimitraAi,
       krishimitraDisease,
-      krishimitraWeather,
     ],
     github: 'https://github.com/udaysingh262009-spec/KrishiMitra-AI',
     demo: 'https://krishimitra-demo.vercel.app',
@@ -49,8 +46,6 @@ export const projects = [
     image: quickhireSplash,
     gallery: [
       quickhireSplash,
-      quickhireRole,
-      quickhireRegister,
       quickhireDashboard,
     ],
     github: 'https://github.com/udaysingh262009-spec?tab=repositories',
