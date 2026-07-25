@@ -39,7 +39,7 @@ export default function ProjectCard({ project }) {
         className="glass-panel rounded-3xl overflow-hidden border border-emerald-500/20 shadow-2xl flex flex-col justify-between group hover:border-emerald-400/50 hover:shadow-[0_15px_45px_rgba(0,255,157,0.15)] transition-all duration-500"
       >
         {/* Clean Card Header Screen View */}
-        <div className="relative w-full h-56 sm:h-64 overflow-hidden bg-gradient-to-br from-[#0A121A] via-[#060B11] to-[#04080D] border-b border-emerald-500/15">
+        <div className="relative w-full h-52 sm:h-60 overflow-hidden bg-gradient-to-br from-[#0A121A] via-[#060B11] to-[#04080D] border-b border-emerald-500/15">
           
           {image ? (
             <div
@@ -56,20 +56,20 @@ export default function ProjectCard({ project }) {
 
               {/* Category Pill & Screenshots Badge */}
               <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
-                <span className="px-3 py-1 rounded-full glass-pill text-[11px] font-bold text-emerald-400 border border-emerald-500/30 shadow-md">
+                <span className="px-2.5 py-0.5 rounded-full glass-pill text-[10px] font-bold text-emerald-400 border border-emerald-500/30 shadow-md">
                   {category}
                 </span>
 
                 {imageList.length > 1 && (
-                  <span className="px-3 py-1 rounded-full glass-pill text-[11px] font-mono font-bold text-gray-200 border border-white/20 flex items-center gap-1.5 shadow-md group-hover/img:border-emerald-400/60 transition-colors">
-                    <FaImages size={12} className="text-emerald-400" />
+                  <span className="px-2.5 py-0.5 rounded-full glass-pill text-[10px] font-mono font-bold text-gray-200 border border-white/20 flex items-center gap-1.5 shadow-md group-hover/img:border-emerald-400/60 transition-colors">
+                    <FaImages size={11} className="text-emerald-400" />
                     <span>View Screenshots ({imageList.length})</span>
                   </span>
                 )}
               </div>
             </div>
           ) : (
-            <div className="p-5 h-full flex flex-col justify-between relative">
+            <div className="p-4 h-full flex flex-col justify-between relative">
               {/* Ambient Background Glow */}
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/20 rounded-full blur-2xl group-hover:bg-emerald-500/35 transition-colors"></div>
 
@@ -80,17 +80,17 @@ export default function ProjectCard({ project }) {
                   <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
                   <span className="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
                 </div>
-                <span className="px-3 py-1 rounded-full glass-pill text-[11px] font-bold text-emerald-400 border border-emerald-500/30 shadow-md">
+                <span className="px-2.5 py-0.5 rounded-full glass-pill text-[10px] font-bold text-emerald-400 border border-emerald-500/30 shadow-md">
                   {category}
                 </span>
               </div>
 
               {/* Icon Banner */}
-              <div className="flex items-center gap-3 relative z-10">
-                <div className="p-3 rounded-2xl glass-panel border border-emerald-500/30 text-emerald-400 group-hover:scale-110 transition-transform">
-                  <CategoryIcon size={24} />
+              <div className="flex items-center gap-2.5 relative z-10">
+                <div className="p-2.5 rounded-2xl glass-panel border border-emerald-500/30 text-emerald-400 group-hover:scale-110 transition-transform">
+                  <CategoryIcon size={20} />
                 </div>
-                <div className="font-mono text-xs text-gray-400">
+                <div className="font-mono text-[11px] text-gray-400">
                   <span className="text-emerald-400 font-bold">project</span>.config.js
                 </div>
               </div>
@@ -98,27 +98,27 @@ export default function ProjectCard({ project }) {
           )}
         </div>
 
-        {/* Card Body */}
-        <div className="p-6 sm:p-7 flex flex-col flex-grow justify-between space-y-5 text-left">
-          <div className="space-y-3">
+        {/* Card Body (Balanced Font Sizes) */}
+        <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between space-y-4 text-left">
+          <div className="space-y-2">
             {/* Title */}
-            <h3 className="text-xl sm:text-2xl font-bold font-['Sora'] text-white group-hover:text-emerald-300 transition-colors">
+            <h3 className="text-lg sm:text-xl font-bold font-['Sora'] text-white group-hover:text-emerald-300 transition-colors">
               {title}
             </h3>
 
             {/* Description */}
-            <p className="text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
+            <p className="text-gray-300 text-xs font-light leading-relaxed">
               {description}
             </p>
           </div>
 
           {/* Technologies Badges */}
-          <div className="space-y-4 pt-2">
-            <div className="flex flex-wrap gap-2">
+          <div className="space-y-3 pt-1">
+            <div className="flex flex-wrap gap-1.5">
               {tech.map((t, idx) => (
                 <span
                   key={idx}
-                  className="px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-semibold text-emerald-300 font-mono"
+                  className="px-2 py-0.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-semibold text-emerald-300 font-mono"
                 >
                   {t}
                 </span>
@@ -126,22 +126,22 @@ export default function ProjectCard({ project }) {
             </div>
 
             {/* Action Links (GitHub Repository & Demo Status Badge) */}
-            <div className="flex items-center gap-3 pt-3 border-t border-white/10">
+            <div className="flex items-center gap-2.5 pt-2.5 border-t border-white/10">
               <a
                 href={github || 'https://github.com/udaysingh262009-spec?tab=repositories'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-bold text-[#060B11] bg-emerald-glow-btn rounded-xl transition-all duration-300 hover:scale-105 shadow-md"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-3.5 py-2 text-xs font-bold text-[#060B11] bg-emerald-glow-btn rounded-xl transition-all duration-300 hover:scale-105 shadow-md"
               >
-                <FaGithub size={16} />
+                <FaGithub size={15} />
                 <span>View GitHub Code</span>
               </a>
 
               <div
-                className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 text-xs font-mono font-semibold text-gray-400 glass-panel rounded-xl border border-white/10"
+                className="inline-flex items-center justify-center gap-1.5 px-2.5 py-2 text-[11px] font-mono font-semibold text-gray-400 glass-panel rounded-xl border border-white/10"
                 title="Live Demo Hosting Upcoming"
               >
-                <FaLock size={11} className="text-emerald-400" />
+                <FaLock size={10} className="text-emerald-400" />
                 <span>Demo Soon</span>
               </div>
             </div>
@@ -149,7 +149,7 @@ export default function ProjectCard({ project }) {
         </div>
       </motion.div>
 
-      {/* Lightbox Modal with Full-Screen Screenshot Carousel Slider (INSIDE CLICK MODAL) */}
+      {/* Lightbox Modal with Full-Screen Screenshot Carousel Slider */}
       <AnimatePresence>
         {lightboxOpen && currentImage && (
           <motion.div
@@ -162,10 +162,10 @@ export default function ProjectCard({ project }) {
             {/* Viewport Top Right Close Button */}
             <button
               onClick={() => setLightboxOpen(false)}
-              className="absolute top-5 right-5 sm:top-8 sm:right-8 z-50 inline-flex items-center gap-2 px-4 py-2.5 rounded-full glass-panel border border-[#00FF9D]/40 text-white hover:text-[#00FF9D] hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,157,0.3)] bg-black/80 font-semibold text-xs sm:text-sm"
+              className="absolute top-5 right-5 sm:top-8 sm:right-8 z-50 inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-[#00FF9D]/40 text-white hover:text-[#00FF9D] hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,157,0.3)] bg-black/80 font-semibold text-xs"
               aria-label="Close modal and go back"
             >
-              <FaXmark size={18} className="text-emerald-400" />
+              <FaXmark size={16} className="text-emerald-400" />
               <span>Back / Close</span>
             </button>
 
@@ -188,7 +188,7 @@ export default function ProjectCard({ project }) {
                   className="p-1.5 text-gray-400 hover:text-emerald-400 hover:scale-110 transition-transform"
                   aria-label="Close preview"
                 >
-                  <FaXmark size={18} />
+                  <FaXmark size={16} />
                 </button>
               </div>
 
@@ -200,23 +200,23 @@ export default function ProjectCard({ project }) {
                   className="w-full h-full object-contain rounded-2xl shadow-2xl"
                 />
 
-                {/* Left & Right Carousel Slider Arrows (Inside Modal) */}
+                {/* Left & Right Carousel Slider Arrows */}
                 {imageList.length > 1 && (
                   <>
                     <button
                       onClick={handlePrevImage}
                       aria-label="Previous screenshot"
-                      className="absolute left-4 top-1/2 -translate-y-1/2 p-3.5 rounded-full glass-panel border border-white/20 text-white hover:text-emerald-400 hover:scale-110 transition-all shadow-2xl bg-black/70"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full glass-panel border border-white/20 text-white hover:text-emerald-400 hover:scale-110 transition-all shadow-2xl bg-black/70"
                     >
-                      <FaChevronLeft size={18} />
+                      <FaChevronLeft size={16} />
                     </button>
 
                     <button
                       onClick={handleNextImage}
                       aria-label="Next screenshot"
-                      className="absolute right-4 top-1/2 -translate-y-1/2 p-3.5 rounded-full glass-panel border border-white/20 text-white hover:text-emerald-400 hover:scale-110 transition-all shadow-2xl bg-black/70"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full glass-panel border border-white/20 text-white hover:text-emerald-400 hover:scale-110 transition-all shadow-2xl bg-black/70"
                     >
-                      <FaChevronRight size={18} />
+                      <FaChevronRight size={16} />
                     </button>
                   </>
                 )}
@@ -235,7 +235,7 @@ export default function ProjectCard({ project }) {
                       <button
                         key={idx}
                         onClick={() => setActiveImgIndex(idx)}
-                        className={`w-16 h-10 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 bg-[#0A121A] ${
+                        className={`w-14 h-9 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 bg-[#0A121A] ${
                           activeImgIndex === idx
                             ? 'border-[#00FF9D] scale-105 shadow-[0_0_12px_#00FF9D]'
                             : 'border-white/20 opacity-60 hover:opacity-100'
