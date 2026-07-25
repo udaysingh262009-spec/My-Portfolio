@@ -68,7 +68,7 @@ export const projects = [
     longDescription: 'Engineered with React.js 19, Vite, Tailwind CSS v4, and Framer Motion. Highlights Uday Singh’s tech stack, real application screenshots, interactive learning journey roadmap, and direct contact channels.',
     tech: ['HTML', 'CSS', 'Tailwind CSS', 'React', 'JavaScript', 'Framer Motion'],
     image: null, // High-tech glass code card preview
-    github: 'https://github.com/udaysingh262009-spec?tab=repositories',
+    github: 'https://github.com/udaysingh262009-spec/My-Portfolio',
     demo: '#',
     featured: true,
     highlights: [

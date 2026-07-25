@@ -31,30 +31,42 @@ export default function Navbar() {
         scrolled ? 'glass-nav shadow-2xl' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-[1700px] w-full mx-auto px-6 sm:px-12 lg:px-24 flex items-center justify-between">
+      <div className="max-w-[1700px] w-full mx-auto px-4 sm:px-8 lg:px-24 flex items-center justify-between">
         
-        {/* Logo: U/ Uday Singh */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 font-extrabold text-base shadow-[0_0_15px_rgba(0,255,157,0.2)] group-hover:scale-105 transition-transform">
-              U/
-            </div>
-            <span className="text-2xl font-extrabold tracking-tight font-['Sora'] text-white group-hover:text-emerald-300 transition-colors">
-              Uday Singh
-            </span>
-          </Link>
-        </motion.div>
+        {/* Left Container: Mobile Menu Toggle Button (LEFT SIDE) + Logo */}
+        <div className="flex items-center gap-3">
+          {/* Mobile Menu Toggle Button on LEFT side */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 text-gray-300 hover:text-emerald-400 focus:outline-none glass-panel rounded-xl border border-white/10"
+            aria-label="Toggle mobile menu"
+          >
+            {mobileMenuOpen ? <FaTimes size={20} className="text-emerald-400" /> : <FaBars size={20} />}
+          </button>
+
+          {/* Logo: U/ Uday Singh (Name shifted slightly to the right with ml-3 sm:ml-4) */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link to="/" className="flex items-center group">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 font-extrabold text-sm sm:text-base shadow-[0_0_15px_rgba(0,255,157,0.2)] group-hover:scale-105 transition-transform">
+                U/
+              </div>
+              <span className="text-xl sm:text-2xl font-extrabold tracking-tight font-['Sora'] text-white group-hover:text-emerald-300 transition-colors ml-3 sm:ml-4">
+                Uday Singh
+              </span>
+            </Link>
+          </motion.div>
+        </div>
 
         {/* Desktop Links */}
         <motion.nav
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="hidden md:flex items-center gap-8 lg:gap-10"
+          className="hidden lg:flex items-center gap-8 lg:gap-10"
         >
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path
@@ -79,7 +91,7 @@ export default function Navbar() {
           })}
         </motion.nav>
 
-        {/* Right Action Icons & CTA Button */}
+        {/* Desktop Right Action Icons & CTA Button */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -134,16 +146,6 @@ export default function Navbar() {
           </Link>
         </motion.div>
 
-        {/* Mobile Hamburger Menu Toggle */}
-        <div className="lg:hidden flex items-center gap-3">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 text-gray-300 hover:text-white focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
-        </div>
       </div>
 
       {/* Mobile Drawer */}

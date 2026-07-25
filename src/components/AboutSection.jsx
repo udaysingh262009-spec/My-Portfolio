@@ -28,7 +28,7 @@ export default function AboutSection() {
         {/* 2-Column Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* COLUMN 1 (LEFT): CLEAN GLOWING NEON GREEN CIRCULAR PORTRAIT FRAME (NO SIDE FLOATING ICONS, NO CODE) */}
+          {/* COLUMN 1 (LEFT): CLEAN GLOWING NEON GREEN CIRCULAR PORTRAIT FRAME WITH PERFECT BACKGROUND MATCHING */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -49,18 +49,26 @@ export default function AboutSection() {
               <div className="relative w-[310px] h-[310px] sm:w-[420px] sm:h-[420px] lg:w-[480px] lg:h-[480px] rounded-full p-2.5 bg-gradient-to-b from-[#00FF9D] via-emerald-500/40 to-transparent shadow-[0_0_90px_rgba(0,255,157,0.45)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_110px_rgba(0,255,157,0.6)] group">
                 
                 {/* Inner Circular Portrait Window */}
-                <div className="w-full h-full rounded-full overflow-hidden border-2 border-emerald-400/50 relative shadow-2xl bg-[#0A121A]">
+                <div className="w-full h-full rounded-full overflow-hidden border-2 border-emerald-400/50 relative shadow-2xl bg-[#060B11]">
                   
                   {/* Photo inside Large Circular Window */}
                   <img
-                    src="/uday_profile_cutout.png"
-                    onError={(e) => { e.target.src = '/uday_profile.jpg' }}
+                    src="/uday_profile.jpg"
+                    onError={(e) => { e.target.src = '/uday_profile_dark.jpg' }}
                     alt="Uday Singh Portrait"
-                    className="w-full h-full object-contain object-bottom filter brightness-[1.03] contrast-[1.05] drop-shadow-[0_0_35px_rgba(0,255,157,0.35)] transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.08] transition-transform duration-700 group-hover:scale-105"
                   />
 
+                  {/* Dark Vignette Radial Overlay (Fades photo background 100% perfectly into #060B11) */}
+                  <div
+                    className="absolute inset-0 rounded-full pointer-events-none z-10"
+                    style={{
+                      background: 'radial-gradient(circle at 50% 45%, transparent 35%, rgba(6, 11, 17, 0.45) 65%, rgba(6, 11, 17, 0.95) 90%, #060B11 100%)',
+                    }}
+                  ></div>
+
                   {/* Bottom Smooth Dark Gradient Blend */}
-                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#060B11] via-[#060B11]/70 to-transparent pointer-events-none z-20"></div>
+                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#060B11] via-[#060B11]/80 to-transparent pointer-events-none z-20"></div>
 
                   {/* Inner Border Glow */}
                   <div className="absolute inset-0 rounded-full border border-white/10 pointer-events-none z-20"></div>
