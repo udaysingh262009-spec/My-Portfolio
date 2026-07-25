@@ -9,6 +9,9 @@ import quickhireRole from '../assets/projects/quickhire_role.png'
 import quickhireRegister from '../assets/projects/quickhire_register.png'
 import quickhireDashboard from '../assets/projects/quickhire_dashboard.png'
 
+import portfolioHome from '../assets/projects/portfolio_home.png'
+import portfolioAbout from '../assets/projects/portfolio_about.png'
+
 export const projects = [
   {
     id: 1,
@@ -67,7 +70,11 @@ export const projects = [
     description: 'A state-of-the-art interactive developer portfolio featuring glassmorphic UI design, Framer Motion animations, custom neon cursor, and real project showcases.',
     longDescription: 'Engineered with React.js 19, Vite, Tailwind CSS v4, and Framer Motion. Highlights Uday Singh’s tech stack, real application screenshots, interactive learning journey roadmap, and direct contact channels.',
     tech: ['HTML', 'CSS', 'Tailwind CSS', 'React', 'JavaScript', 'Framer Motion'],
-    image: null, // High-tech glass code card preview
+    image: portfolioHome,
+    gallery: [
+      portfolioHome,
+      portfolioAbout,
+    ],
     github: 'https://github.com/udaysingh262009-spec/My-Portfolio',
     demo: '#',
     featured: true,
