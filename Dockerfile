@@ -1,27 +1,10 @@
-# Build Stage
-FROM node:20-alpine AS build
-
-WORKDIR /app
-
-# Copy package files
-COPY package*.json ./
-
-# Install dependencies
-RUN npm ci
-
-# Copy project source code
-COPY . .
-
-# Build Vite production bundle
-RUN npm run build
-
-# Production Stage with Nginx
+# Pure Nginx Production Image (No Node.js Runtime Required)
 FROM nginx:alpine
 
-# Copy custom nginx configuration if needed or use default static serving
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy pre-built static web files from dist to Nginx html directory
+COPY dist /usr/share/nginx/html
 
-# Copy SPA routing Nginx config
+# SPA Routing Nginx Configuration
 RUN echo 'server { \
     listen 80; \
     location / { \
