@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { 
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, 
-  FaGitAlt, FaWrench
+  FaGitAlt, FaWrench, FaDocker
 } from 'react-icons/fa6'
 import { SiFastapi, SiPandas, SiNumpy } from 'react-icons/si'
 
@@ -24,6 +24,7 @@ const skillsList = [
 
   // Tools
   { name: 'Git & GitHub', category: 'Tools', level: '92%', icon: FaGitAlt, color: 'text-orange-400' },
+  { name: 'Docker', category: 'Tools', level: '88%', icon: FaDocker, color: 'text-sky-400' },
 ]
 
 export default function SkillsSection() {
